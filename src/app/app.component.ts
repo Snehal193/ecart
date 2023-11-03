@@ -1,4 +1,11 @@
+import {
+  faDashboard,
+  faBox,
+  faContactBook,
+
+} from '@fortawesome/free-solid-svg-icons';
 import { Component } from '@angular/core';
+import { AuthenticationService } from './service/authentication/authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +13,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-forms';
+  constructor(public authenticationService: AuthenticationService) { }
+
+  title = 'main project';
+  faDashboard = faDashboard;
+  faBox = faBox;
+  faContactBook = faContactBook;
 }

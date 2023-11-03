@@ -1,0 +1,41 @@
+<div class="main-div">
+
+    <h3 class="text-center" style="position: relative; top: 12rem; ">Login to your account</h3>
+
+    <div class="card position-absolute top-50 start-50 translate-middle" style="width: 28rem; height: 20rem; background-color: aliceblue;">
+        <div class="card-body position-relative">
+    
+         
+                    <!--myform contains form object that is all the form details-->
+                    <form #signInForm="ngForm" (ngSubmit)="onFormSubmit(signInForm)" style="position: relative; top: 2rem; " >
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="inputEmail" name="email" ngModel required #email="ngModel" />
+                            <span class="help-text"
+                                *ngIf="!email.valid && (email.dirty || signInForm.submitted)  ">email cannot be empty</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="inputPassword" name="password" ngModel required #password ="ngModel"
+                                />
+                                <span class="help-text"
+                                *ngIf="!password.valid && (password.dirty || signInForm.submitted)  ">password is required</span>
+                            
+                            
+                        </div>
+    
+                        <div class="mt-2 text-center" style="top: 11rem; left: 11rem; position: absolute; ">
+                            <button type="submit" class="btn" 
+                          
+                            style="background: #2E8BC0; color: white; font-weight: 400;">Submit</button>
+                        </div>
+                    </form>
+              
+            
+    
+        </div>
+    
+    </div>
+
+</div>
+

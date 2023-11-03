@@ -1,0 +1,40 @@
+<div class="card position-absolute top-50 start-50 translate-middle" style="width: 28rem; height: 27rem; background-color: aliceblue;">
+    <div class="card-body position-relative">
+
+     <h3 class="text-center">Add Product Details</h3>
+                <!--myform contains form object that is all the form details-->
+                <form #addProduct="ngForm" (ngSubmit)="submit(addProduct.value)">
+                    <div class="form-group">
+                        <label for="username">Product ID</label>
+                        <input type="number" class="form-control" id="ProductId" name="ProductId" ngModel />
+                     
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" ngModel required />
+                    </div>
+                    <div class="form-group">
+                        <label for="brand">Brand</label>
+                        <input type="brand" class="form-control" id="brand" name="brand" ngModel required />
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="price" class="form-control" id="price" name="price" ngModel required />
+                    </div>
+                    <div class="form-group">
+                        <label for="discount">Discount</label>
+                        <input type="discount" class="form-control" id="discount" name="discount" ngModel required />
+                    </div>
+
+                    <div class="mt-2 text-center" style="top: 23rem; left: 11rem; position: inherit; ">
+                        <button type="submit" class="btn" 
+                      
+                        style="background: #2E8BC0; color: white; font-weight: 400;">Add Product</button>
+                    </div>
+                </form>
+          
+        
+
+    </div>
+
+</div>
