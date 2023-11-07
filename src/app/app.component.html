@@ -1,29 +1,31 @@
 <!-- *ngIf="authenticationService.isAuthenticated"   -->
 
-<div class="main-container d-flex" >
-    <div class="sidebar" id="side_nav">
-        <div class="header-box px-5 pt-3 pb-4 d-flex text-center" >
-            <h1 class="fs-5" style="font-weight: bold; font-size: larger; text-align: center;"> <span class="text-white">Zelican</span></h1>
+<div class="main-container d-flex">
+    <div class="sidebar" id="side_nav" *ngIf="authenticationService.isAuthenticated">
+        <div class="header-box px-5 pt-3 pb-4 d-flex text-center">
+            <h1 class="fs-5" style="font-weight: bold; font-size: larger; text-align: center;"> <span
+                    class="text-white">Zelican</span></h1>
             <button class="btn d-md-none d-block close-btn px-1 py-0 text-white"><i class="fal fa-stream"></i></button>
         </div>
 
         <ul class="list-unstyled px-2">
             <li class=""><a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true}"
-                    class="text-decoration-none px-3 py-4 d-block"><fa-icon class=" px-2" [icon]="faDashboard"></fa-icon>
+                    class="text-decoration-none px-3 py-4 d-block"><fa-icon class=" px-2"
+                        [icon]="faDashboard"></fa-icon>
                     Dashboard</a></li>
             <li class=""><a class="nav-link" routerLink="/products" routerLinkActive="active"
                     class="text-decoration-none px-3 py-2 d-block"><fa-icon class=" px-2" [icon]="faBox"></fa-icon>
                     Products</a></li>
-           
+
 
         </ul>
         <hr class="h-color mx-2">
 
-       
+
 
     </div>
     <div class="content">
-        <app-header ></app-header>
+
         <router-outlet></router-outlet>
     </div>
 </div>

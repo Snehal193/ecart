@@ -10,7 +10,9 @@ const routes: Routes = [
   {path: "app", component: AppComponent },
   {path: "dashboard", component: DashboardComponent },
   {path: "login", component: TempFormComponent},
-  {path: "add-product", component: AddProductComponent},
+  {path: "product", component: ProjectsComponent},
+  {path: "addProduct", component: AddProductComponent},
+
 
   
   {

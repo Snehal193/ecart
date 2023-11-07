@@ -15,6 +15,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { MessagesComponent } from './messages/messages.component';
 import {AngularFireModule } from '@angular/fire/compat';
 import { AddProductComponent } from './service/authentication/add-product/add-product.component'
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,11 @@ import { AddProductComponent } from './service/authentication/add-product/add-pr
     AppRoutingModule,
     FormsModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
